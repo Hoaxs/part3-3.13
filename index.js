@@ -25,5 +25,5 @@ app.get('/api/persons/:id', (request, response) => {
 })
 
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT
 app.listen(PORT, () => { console.log(`Running on port ${PORT}`) })
