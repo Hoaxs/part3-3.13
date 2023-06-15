@@ -3,14 +3,14 @@ const express = require('express');
 const app = express();
 app.use(express.static('build'))
 const cors = require('cors');
-const Person = require('./models/person')
+const person = require('./models/person')
 app.use(cors());
 
 app.use(express.json());
 
 app.get('/api/persons', (request, response) => {
 
-    Person.find({}).then(person => {
+    person.find({}).then(person => {
         response.json(person)
     })
 })
@@ -18,7 +18,7 @@ app.get('/api/persons', (request, response) => {
 
 // use Mongoose findById method
 app.get('/api/persons/:id', (request, response) => {
-    Person.findById(request.params.id).then(person => {
+    person.findById(request.params.id).then(person => {
         response.json(person)
     })
 
