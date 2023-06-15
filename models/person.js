@@ -27,4 +27,4 @@ personSchema.set('toJson', {
         delete returnedObject.__v
     }
 })
-module.exports = mongoose.model('Person', personSchema, 'clusterO')
+module.exports = mongoose.model('Person', personSchema)
