@@ -10,7 +10,7 @@ app.use(express.json());
 
 app.get('/api/persons', (request, response) => {
 
-    person.find({}).then(person => {
+    Person.find({}).then(person => {
         response.json(person)
     })
 })
